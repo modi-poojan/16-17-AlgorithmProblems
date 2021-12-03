@@ -8,18 +8,18 @@ public class Insertion_Sort {
 		
 		for(int i = 1; i < array.length; i++) {
 			
-			String key = array[i];               
-			int index = i - 1;
+			String temp = array[i];               
+			int index = i ;
 			
-			while(index >= 0) {
+			while(index > 0 && array[index-1].compareTo(temp) > 0){
 				
-				if(key.compareTo(array[index]) > 0) {
+				if(temp.compareTo(array[index]) > 0) {
 					break;
 				}
-				array[index + 1] = array[index];       
+				array[index] = array[index - 1];       
 				index--;
 			}
-			array[index + 1] = key;          
+			array[index] = temp;          
 		}
 		System.out.println("\nSorted Array :-  " + Arrays.toString(array));
 	}
