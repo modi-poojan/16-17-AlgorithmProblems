@@ -1,16 +1,20 @@
 package com.Algorithms;
 
-import java.util.Arrays;
+import java.util.Scanner;
 
 public class Algorithm_Main {
 
 	public static void main(String[] args) {
 		
-		MergeSort call = new MergeSort();
-		int array[] = {89, 51 ,72 ,14 , 1, 35};
-		System.out.println("Unsorted array is :"+ Arrays.toString(array));
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter 1st String \n");
+		String first = scan.next();
+		System.out.println("Enter 2nd String \n");
+		String second = scan.next();
+		System.out.println("\nGiven String :\n"+first+"\n"+second);
 		
-		call.mergeSort(array, 0, array.length-1);
-		System.out.println("Sorted array is :"+ Arrays.toString(array));
-	}
+		AnagramDetection call = new AnagramDetection();
+		call.checkAnagram(first, second);
+		
+}
 }
